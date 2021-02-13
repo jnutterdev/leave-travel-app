@@ -17,5 +17,5 @@ A simple app created with Express.js, EJS for templating
 
 ## Technologies
 
-[Express.js](http://expressjs.com/)
-[EJS](https://ejs.co/) 
+- [Express.js](http://expressjs.com/)
+- [EJS](https://ejs.co/) 
