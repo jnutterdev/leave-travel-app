@@ -2,20 +2,18 @@
 
 ## Description
 
-A simple app created with Express.js, EJS for templating
+An app created with PostgreSQL, Express.js, React.js, and Node.js
 
 ## Install
 
 `git clone https://github.com/jnutterdev/didactic-guacamole`
 
-`cd didactic-guacamole/`
-
-`npm install`
-
-`node index.js`
 
 
 ## Technologies
 
 - [Express.js](http://expressjs.com/)
-- [EJS](https://ejs.co/) 
+- [React](https://reactjs.org/)
+- [Bulma](https://bulma.io/)
+- [Node.js](https://nodejs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
