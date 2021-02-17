@@ -6,7 +6,11 @@ An app created with PostgreSQL, Express.js, React.js, and Node.js
 
 ## Install
 
-`git clone https://github.com/jnutterdev/didactic-guacamole`
+`git clone https://github.com/jnutterdev/didactic-guacamole.git`
+
+`cd didactic-guacamole`
+
+`npm install`
 
 
 
