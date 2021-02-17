@@ -1,5 +1,4 @@
 {
-
   "name": "didactic-guacamole",
   "version": "1.0.0",
   "description": "A simple app created with Express.js",
@@ -27,4 +26,3 @@
     "express-ejs-layouts": "^2.5.0"
   }
 }
-
