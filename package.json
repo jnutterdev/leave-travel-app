@@ -1,28 +1,32 @@
 {
-  "name": "didactic-guacamole",
-  "version": "1.0.0",
-  "description": "A simple app created with Express.js",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jnutterdev/didactic-guacamole.git"
-  },
-  "keywords": [],
-  "author": "Kristin, Tara, John",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jnutterdev/didactic-guacamole/issues"
-  },
-  "homepage": "https://github.com/jnutterdev/didactic-guacamole#readme",
-  "dependencies": {
-    "pg": "^8.5.1",
-    "pg-hstore": "^2.3.3",
-    "sequelize": "^6.5.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0"
-  }
+    "name": "didactic-guacamole",
+    "version": "1.0.0",
+    "description": "A simple app created with Express.js",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node express-server/server.js",
+        "build": "cd react-client && npm install && npm run build"
+    },
+    "proxy": "http://localhost:3001",
+    "engines": {
+        "node": "15.5.1"
+    }
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jnutterdev/didactic-guacamole.git"
+    },
+    "keywords": [],
+    "author": "Kristin, Tara, John",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jnutterdev/didactic-guacamole/issues"
+    },
+    "homepage": "https://github.com/jnutterdev/didactic-guacamole#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "pg": "^8.5.1",
+        "pg-hstore": "^2.3.3",
+        "sequelize": "^6.5.0"
+    }
 }
