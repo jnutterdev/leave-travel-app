@@ -11,6 +11,7 @@ app.use(cors());
 // Passing a connection URI for sequelize database
 const sequelize = new Sequelize('postgres://user:"":5432/leavedb')
 
+// Commented out sequelize auth temporarily so we can get app deployed, will revisit after
 // try {
 //     await sequelize.authenticate();
 //     console.log('Connection has been established successfully.');
@@ -21,7 +22,7 @@ const sequelize = new Sequelize('postgres://user:"":5432/leavedb')
 // Have Node serve the files for our built React app
 app.use(express.static(path.join(__dirname, 'react-client/build')));
 
-// Handle GET requests to /api route
+// A simple endpoint just for testing GET requests
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
