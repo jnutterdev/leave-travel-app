@@ -5,10 +5,9 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node express-server/server.js",
+        "start": "node server.js",
         "build": "cd react-client && npm install && npm run build"
     },
-    "proxy": "http://localhost:3001",
     "engines": {
         "node": "15.5.1"
     },
