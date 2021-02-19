@@ -4,6 +4,10 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
+
+const cors = require("cors");
+app.use(cors());
+
 // Passing a connection URI for sequelize database
 const sequelize = new Sequelize('postgres://user:"":5432/leavedb')
 
@@ -15,7 +19,7 @@ const sequelize = new Sequelize('postgres://user:"":5432/leavedb')
 // }
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, '../react-client/build')));
+app.use(express.static(path.join(__dirname, 'react-client/build')));
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
@@ -24,7 +28,11 @@ app.get("/api", (req, res) => {
 
 // All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../react-client/build', 'index.html'));
+  res.sendFile(path.join(__dirname+'/react-client/build/index.html'));
+});
+
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
