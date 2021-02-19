@@ -21,3 +21,11 @@ An app created with PostgreSQL, Express.js, React.js, and Node.js
 - [Bulma](https://bulma.io/)
 - [Node.js](https://nodejs.org/)
 - [PostgreSQL](https://www.postgresql.org/)
+
+## Hosting
+
+- [Heroku](https://heroku.com)
+
+## App site
+
+- [Didactic-guacamole](https://powerful-brushlands-03027.herokuapp.com/)
