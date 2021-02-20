@@ -12,7 +12,7 @@ class SearchResults extends React.Component {
     }
 
     componentDidMount() {
-        const url = "https://api.sygictravelapi.com/1.2/en/places/list?query=Europe"
+        const url = "https://api.sygictravelapi.com/1.2/en/places/list?query=Japan"
         fetch((url), {
         method: "GET",
         headers: {
