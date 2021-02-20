@@ -27,7 +27,6 @@
         "express": "^4.17.1",
         "pg": "^8.5.1",
         "pg-hstore": "^2.3.3",
-        "react-router": "^5.2.0",
         "sequelize": "^6.5.0"
     }
 }
