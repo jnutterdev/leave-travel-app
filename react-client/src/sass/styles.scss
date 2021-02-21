@@ -1,0 +1,12 @@
+html {
+    background: url("../static/img/topography.png");
+}
+
+.navbar {
+    background-image: linear-gradient(90deg, $pink 10%, $orange 90%);
+}
+
+.hero .subtitle {
+    padding: 3rem 0;
+    line-height: 1.5;
+}
