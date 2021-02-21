@@ -36,7 +36,7 @@ export default function Header() {
                     </span>
                    
                     <span className="navbar-item">
-                        <a className="button is-white is-primary" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html">
+                        <a className="button is-white is-primary" href="#login">
                             <span className="icon">
                             <i className="fas fa-user-plus"></i>
                             </span>
