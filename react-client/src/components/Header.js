@@ -1,70 +1,52 @@
 import React from 'react';
 
-
 export default function Header() {
 
     return (
         
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav className="navbar">
+        <div className="container">
             <div className="navbar-brand">
-                <a className="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="bulma logo" />
+                <a className="navbar-item" href="#home">
+                    <img src={process.env.PUBLIC_URL+"/img/leave01.png"} alt="Logo" />
                 </a>
-
-                <a href="#Section" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+                <span className="navbar-burger burger" data-target="navbarMenu">
+                    <span>Favorites</span>
+                    <span>Trips</span>
+                    <span>Login</span>
+                </span>
             </div>
-
-            <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-start">
-                    <a href="#Section" className="navbar-item">
-                        Home
-                    </a>
-
-            <a href="#Section" className="navbar-item">
-                 Documentation
-            </a>
-
-            <div className="navbar-item has-dropdown is-hoverable">
-                <a href="#Section" className="navbar-link">
-                     More
-                </a>
-
-            <div className="navbar-dropdown">
-                <a href="#Section" className="navbar-item">
-                    About
-                </a>
-                <a href="#Section" className="navbar-item">
-                    Jobs
-                </a>
-                <a href="#Section" className="navbar-item">
-                    Contact
-                </a>
-                <hr className="navbar-divider" />
-                <a href="#Section" className="navbar-item">
-                    Report an issue
-                </a>
+            <div id="navbarMenu" className="navbar-menu">
+                <div className="navbar-end">
+                    <span className="navbar-item">
+                        <a className="button is-white is-outlined" href="#home">
+                            <span className="icon">
+                                <i className="fa fa-home"></i>
+                            </span>
+                            <span>Favorites</span>
+                        </a>
+                    </span>
+                    <span className="navbar-item">
+                        <a className="button is-white is-outlined" href="#home">
+                            <span className="icon">
+                            <i className="fas fa-map-marked-alt"></i>
+                            </span>
+                            <span>Trips</span>
+                        </a>
+                    </span>
+                   
+                    <span className="navbar-item">
+                        <a className="button is-white is-primary" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html">
+                            <span className="icon">
+                            <i className="fas fa-user-plus"></i>
+                            </span>
+                            <span>Login</span>
+                        </a>
+                    </span>
+                </div>
             </div>
-      </div>
-    </div>
-
-    <div className="navbar-end">
-      <div className="navbar-item">
-        <div className="buttons">
-          <a href="#Section" className="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a href="#Section" className="button is-light">
-            Log in
-          </a>
         </div>
-      </div>
-    </div>
-  </div>
-</nav>
+    </nav>
 
     )
 }
