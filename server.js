@@ -7,6 +7,7 @@ const port = process.env.PORT || 3001;
 
 const cors = require("cors");
 app.use(cors());
+app.use(express.json()); //req.body
 
 // Passing a connection URI for sequelize database
 const sequelize = new Sequelize('postgres://user:"":5432/leavedb')
@@ -35,5 +36,9 @@ app.get('*', (req, res) => {
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+//Requiring the routes
+var routes = require("./app/routes");
+app.use('/', routes);
 
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
