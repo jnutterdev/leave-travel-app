@@ -1,13 +1,13 @@
 import SearchForm from '../components/SearchForm';
 import { connect } from 'react-redux';
 
-import { actionAddDestination, actionAddDates } from '../actions';
+import { actionAddDestination } from '../actions';
 
 function mapStateToProps(state) {
 
     return {
         // propName seen by React : value-in-state
-        location: state.location,
+        destination: state.destination,
         dates: state.dates
 
     }
@@ -15,9 +15,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        handleClick: () => {
-            dispatch(actionAddDestination());
-            dispatch(actionAddDates());
+        handleClick: (destination) => {
+            dispatch(actionAddDestination(destination));
+            // dispatch(actionAddDates());
         }
     }
 }
