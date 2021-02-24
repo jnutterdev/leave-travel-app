@@ -11,6 +11,7 @@ html {
     line-height: 1.5;
 }
 
-.column img {
-    border-radius: 50%;
+figure img {
+    border-image-slice: 20;
+    border-image-width: 20;
 }
