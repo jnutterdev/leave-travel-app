@@ -13,8 +13,8 @@ export default function Hero(){
                 </p>
             </div>
             <div className="column">
-            <figure className="image">
-                <img className="is-rounded borders" src={process.env.PUBLIC_URL+"/img/beach02.jpg"} alt="Beach scene"/>
+            <figure className="image is-square">
+                <img className="is-rounded" src={process.env.PUBLIC_URL+"/img/beach02.jpg"} width="200" height="200" alt="Beach scene"/>
             </figure>
             </div>
         </div>
