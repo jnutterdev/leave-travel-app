@@ -23,8 +23,8 @@ const sequelize = new Sequelize('postgres://user:"":5432/leavedb')
 app.use(express.static(path.join(__dirname, 'react-client/build')));
 
 // A simple endpoint just for testing GET requests
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
+app.get("/ping", (req, res) => {
+  res.json({ message: "The express server is working!" });
 });
 
 // All other GET requests not handled before will return our React app

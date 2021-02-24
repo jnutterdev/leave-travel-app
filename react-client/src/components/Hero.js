@@ -3,17 +3,19 @@ import React from 'react';
 export default function Hero(){
     return(
         <section className="hero is-fullheight">
-        <div className="hero-body columns is-one-quarter">
-            <div className="column is-three-fifths">
+        <div className="hero-body">
+            <div className="column">
                 <p className="title">
                    Leave.
                 </p>
                 <p className="subtitle">
-                    Go on, get lost!
+                    Go on, get lost! Take an adventure. Find a destination.
                 </p>
             </div>
-            <div className="column auto">
-                <img src={process.env.PUBLIC_URL+"/img/beach01.jpg"} alt="Beach scene"/>
+            <div className="column">
+            <figure className="image">
+                <img className="is-rounded borders" src={process.env.PUBLIC_URL+"/img/beach02.jpg"} alt="Beach scene"/>
+            </figure>
             </div>
         </div>
         </section>
