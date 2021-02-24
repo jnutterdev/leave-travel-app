@@ -11,9 +11,9 @@ export default function Header() {
                     <img src={process.env.PUBLIC_URL+"/img/leave01.png"} alt="Logo" />
                 </a>
                 <span className="navbar-burger burger" data-target="navbarMenu">
-                    <span>Favorites</span>
-                    <span>Trips</span>
-                    <span>Login</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </span>
             </div>
             <div id="navbarMenu" className="navbar-menu">
