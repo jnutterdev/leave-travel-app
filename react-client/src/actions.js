@@ -1,14 +1,16 @@
-export const ADD_DESTINATION = 'addDestination';
-export const ADD_DATES = 'addDates';
+export const ADD_DESTINATION = 'ADD_DESTINATION';
+export const ADD_DATES = 'ADD_DATES';
 
-export function actionAddDestination() {
+export function actionAddDestination(destination) {
     return {
-        type: ADD_DESTINATION
+        type: ADD_DESTINATION,
+        payload: destination
     }
 };
 
-export function actionAddDates() {
+export function actionAddDates(dates) {
     return {
-        type: ADD_DATES
+        type: ADD_DATES,
+        payload: dates
     }
 };

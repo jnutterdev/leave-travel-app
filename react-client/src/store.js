@@ -1,11 +1,11 @@
 import { createStore } from 'redux';
 import { userSearch } from './reducers'
 
-const location = [];
+const destination = [];
 const dates = [];
 
 const defaultState = {
-    location,
+    destination,
     dates,
 };
 
