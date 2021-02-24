@@ -3,19 +3,30 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = router;
+// Require controller modules
+const trips_controller = require('../controllers/tripsController');
+const users_controller = require('../controllers/usersController');
 
-// Create a trip
-app.post("/mytrips", async (req,res) => {
+// MY TRIPS ROUTES //
+
+// CREATES trip (enters trip details, selects place, saves)
+router.post('/mytrips', trips_controller.mytrips_create_post);
+
+/* async (req,res) => {
     try {
         console.log(req.body);
     } catch (error) {
         console.error(err.message);
     }
-});
-// Get all trips
+}); */
 
-// Get a trip
+// GET My Trips
+router.get('/mytrips', trips_controller.mytrips_findOneUser_get);
 
-// Update a trip
+// add new reservation (put for new)
 
-// Delete a trip
+// update trip (patch for update)
+
+// delete a trip
+
+
