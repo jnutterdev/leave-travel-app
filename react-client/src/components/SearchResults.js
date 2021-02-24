@@ -45,13 +45,36 @@ class SearchResults extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <ul>
+                <div className="columns">
                     {places.map(place => (
-                        <li key={place.name}>
-                            {place.name}
-                        </li>
+                        <div className="column">
+                       <div className="card">
+                       <div className="card-image">
+                         <figure className="image is-128x128">
+                           <img src="http://placeimg.com/300/300/nature" alt={ place.name  } />
+                         </figure>
+                       </div>
+                       <div className="card-content">
+                         <div className="media">
+                           <div className="media-left">
+                             <figure className="image is-48x48">
+                               <i class="fas fa-compass"></i>
+                             </figure>
+                           </div>
+                           <div className="media-content">
+                             <p className="title is-4">{place.name}</p>
+                             <p className="subtitle is-6">{place.name_suffix}</p>
+                           </div>
+                         </div>
+                     
+                         <div className="content">
+                           {place.perex}    
+                         </div>
+                       </div>
+                     </div>
+                     </div>
                     ))}
-                </ul>
+                </div>
             );
         }
     }
