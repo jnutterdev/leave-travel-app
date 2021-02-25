@@ -7,7 +7,7 @@ export default function Header() {
         <nav className="navbar">
         <div className="container">
             <div className="navbar-brand">
-                <a className="navbar-item" href="#home">
+                <a className="navbar-item" href="/">
                     <img src={process.env.PUBLIC_URL+"/img/leave01.png"} alt="Logo" />
                 </a>
                 <span className="navbar-burger burger" data-target="navbarMenu">
@@ -19,7 +19,7 @@ export default function Header() {
             <div id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
                     <span className="navbar-item">
-                        <a className="button is-white is-outlined" href="#home">
+                        <a className="button is-white is-outlined" href="/favorites">
                             <span className="icon">
                                 <i className="fa fa-home"></i>
                             </span>
@@ -27,7 +27,7 @@ export default function Header() {
                         </a>
                     </span>
                     <span className="navbar-item">
-                        <a className="button is-white is-outlined" href="#home">
+                        <a className="button is-white is-outlined" href="/trips">
                             <span className="icon">
                             <i className="fas fa-map-marked-alt"></i>
                             </span>
