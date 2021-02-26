@@ -8,12 +8,13 @@ const SearchForm = (props) => {
 
     const [ destination, setDestination ] = useState("");
     const [ dates, setDates ] = useState("");
+    const [ numberOfPeople, setNumberOfPeople ] = useState("");
 
     //James - this is what I added 
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.handleClick(destination, dates);
+        props.handleClick(destination, dates, numberOfPeople);
         history.push("/results");
     }
 
@@ -23,7 +24,7 @@ const SearchForm = (props) => {
                 <label>
                     <input
                         type="text"
-                        value={destination}
+                        value={ destination }
                         onChange={event => 
                         setDestination(event.target.value)}
                     />
@@ -31,7 +32,7 @@ const SearchForm = (props) => {
                 <label>
                     <input
                         type="date"
-                        value={dates}
+                        value={ dates }
                         onChange={event => 
                             setDates(event.target.value)}
                     />
@@ -39,7 +40,9 @@ const SearchForm = (props) => {
                 <label>
                     <input
                         type="number"
-                        value=""
+                        value={ numberOfPeople }
+                        onChange={event => 
+                            setNumberOfPeople(event.target.value)}
                     />
                 </label> 
                 <input type="submit" />

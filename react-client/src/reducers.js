@@ -1,6 +1,7 @@
 import {
     ADD_DESTINATION,
-    ADD_DATES
+    ADD_DATES,
+    ADD_PEOPLE
 } from './actions';
 
 export function userSearch(state, action) {
@@ -15,6 +16,11 @@ export function userSearch(state, action) {
             return {
                 ...state, 
                 dates: [action.payload]
+            }
+        case ADD_PEOPLE: 
+            return {
+                ...state,
+                numberOfPeople: [action.payload]
             }
         default: 
             return state;
