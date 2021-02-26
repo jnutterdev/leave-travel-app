@@ -7,12 +7,12 @@ class SearchResults extends React.Component {
             this.state = {
                 error: null,
                 isLoaded: false,
-                places:[]
+                places:[],
             };
     }
 
     componentDidMount() {
-        const url = "https://api.sygictravelapi.com/1.2/en/places/list?query={destination}"
+        const url = `https://api.sygictravelapi.com/1.2/en/places/list?query=${this.props.destination}`
         fetch((url), {
         method: "GET",
         headers: {
@@ -51,7 +51,7 @@ class SearchResults extends React.Component {
                        <div className="card">
                        <div className="card-image">
                          <figure className="image is-16by9">
-                           <img src={ place.thumbnail ? place.thumbnail : "http://placeimg.com/300/300/nature" } alt={ place.name  } />
+                           <img src={ place.thumbnail_url } alt={ place.name  } />
                          </figure>
                        </div>
                        <div className="card-content">
