@@ -9,6 +9,7 @@ import './App.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Mytrips from './components/Mytrips';
 import Footer from './components/Footer';
 import SearchResults from './components/SearchResults';
 
@@ -22,6 +23,7 @@ function App() {
                 <Hero />
                 <h1 className="title">Coming soon!</h1>
                 <SearchResults />
+                <Mytrips />
               </div>
               <Footer />
           </section>
