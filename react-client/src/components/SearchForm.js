@@ -18,10 +18,10 @@ const SearchForm = (props) => {
     }
 
     return (
-        <div>
+        <div className="container">
             <form onSubmit = { handleSubmit }>
                 <label>
-                    <input
+                    <input className="input is-rounded is-primary"
                         type="text"
                         value={destination}
                         onChange={event => 
@@ -41,8 +41,10 @@ const SearchForm = (props) => {
                         type="number"
                         value=""
                     />
-                </label> 
-                <input type="submit" />
+                </label>
+                <useHistory to = "/results">
+                    <button className="button is-primary" type="submit">Search</button>
+                </useHistory>
             </form>
         </div>
 

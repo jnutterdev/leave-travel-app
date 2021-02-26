@@ -6,6 +6,7 @@
 
 html {
     background: url("../static/img/topography.png");
+    background-size: 1000px;
 }
 
 .navbar {
@@ -20,4 +21,56 @@ html {
 figure img {
     border-image-slice: 20;
     border-image-width: 20;
+}
+
+p,
+li,
+button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $family-sans-serif;
+}
+
+.react-calendar__tile--now {
+    background: $orange;
+}
+
+.bg-image {
+    background: url("../static/img/vw2.jpg");
+    background-position: top;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+}
+
+.bg-trips {
+    background: white;
+}
+
+.menu-list li ul {
+    border-left: none;
+    margin: 0.75em;
+    padding-left: 0;
+}
+
+.react-calendar {
+    margin: auto;
+}
+
+.is-active {
+    color: black;
+}
+
+.p-fix {
+    padding: 5rem 0;
+}
+
+.input {
+    max-width: 50%;
+    margin-right: 9px;
 }
