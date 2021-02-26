@@ -38,9 +38,9 @@ const SearchForm = (props) => {
                         value=""
                     />
                 </label> */}
-                {/* <Link to = "/results"> */}
+                <Link to = "/results"> 
                     <input type="submit"/>
-                {/* </Link> */}
+                </Link>
             </form>
         </div>
 
