@@ -15,6 +15,7 @@ import './App.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Mytrips from './components/Mytrips';
 import Footer from './components/Footer';
 import SearchResults from './containers/SearchResults';
 import SearchForm from './containers/SearchForm'
@@ -38,6 +39,9 @@ function App() {
                 </Route>
               </Switch>
             </div>
+              <div className="container">
+                  <Mytrips />
+                </div>
             <Footer />
           </section>
       </div>

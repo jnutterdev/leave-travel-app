@@ -5,9 +5,9 @@ export default function Hero(){
         <section className="hero is-fullheight">
         <div className="hero-body">
             <div className="column">
-                <p className="title">
-                   Leave.
-                </p>
+                <h1 className="title">
+                   LEAVE.
+                </h1>
                 <p className="subtitle">
                     Go on, get lost! Take an adventure. Find a destination.
                 </p>

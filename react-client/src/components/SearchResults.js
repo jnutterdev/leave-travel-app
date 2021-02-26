@@ -7,12 +7,12 @@ class SearchResults extends React.Component {
             this.state = {
                 error: null,
                 isLoaded: false,
-                places:[]
+                places:[],
             };
     }
 
     componentDidMount() {
-        const url = "https://api.sygictravelapi.com/1.2/en/places/list?query={destination}"
+        const url = `https://api.sygictravelapi.com/1.2/en/places/list?query=${this.props.destination}`
         fetch((url), {
         method: "GET",
         headers: {
@@ -45,13 +45,14 @@ class SearchResults extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <div className="columns is-mobile is-multiline is-centered">
+                <div className="container p-fix">
+                    <div className="columns is-mobile is-multiline is-centered">
                     {places.map(place => (
                         <div className="column is-one-third">
                        <div className="card">
                        <div className="card-image">
                          <figure className="image is-16by9">
-                           <img src="http://placeimg.com/300/300/nature" alt={ place.name  } />
+                           <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/640/480/nature"} alt={ place.name  } />
                          </figure>
                        </div>
                        <div className="card-content">
@@ -74,6 +75,7 @@ class SearchResults extends React.Component {
                      </div>
                      </div>
                     ))}
+                </div>
                 </div>
             );
         }
