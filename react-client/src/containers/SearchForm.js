@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { actionAddDestination } from '../actions';
 
 function mapStateToProps(state) {
-
     return {
         // propName seen by React : value-in-state
         destination: state.destination,

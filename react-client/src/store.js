@@ -1,6 +1,8 @@
 import { createStore } from 'redux';
 import { userSearch } from './reducers'
 
+import { devToolsEnhancer } from 'redux-devtools-extension';
+
 const destination = [];
 const dates = [];
 
@@ -9,4 +11,4 @@ const defaultState = {
     dates,
 };
 
-export const store = createStore(userSearch, defaultState);
+export const store = createStore(userSearch, defaultState, devToolsEnhancer());

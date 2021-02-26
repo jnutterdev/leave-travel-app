@@ -6,6 +6,7 @@
 
 html {
     background: url("../static/img/topography.png");
+    background-size: 1000px;
 }
 
 .navbar {
@@ -20,4 +21,10 @@ html {
 figure img {
     border-image-slice: 20;
     border-image-width: 20;
+}
+
+p,
+li,
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
