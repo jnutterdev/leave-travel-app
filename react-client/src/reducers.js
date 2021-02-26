@@ -14,7 +14,7 @@ export function userSearch(state, action) {
         case ADD_DATES: 
             return {
                 ...state, 
-                [action.payload.dates]: state[action.payload.dates]
+                dates: [action.payload]
             }
         default: 
             return state;
