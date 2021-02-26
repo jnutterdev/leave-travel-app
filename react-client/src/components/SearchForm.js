@@ -41,10 +41,10 @@ const SearchForm = (props) => {
                         type="number"
                         value=""
                     />
-                </label> */}
-                <Link to = "/results">
+                </label>
+                <useHistory to = "/results">
                     <button className="button is-primary" type="submit">Search</button>
-                </Link>
+                </useHistory>
             </form>
         </div>
 
