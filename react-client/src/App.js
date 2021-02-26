@@ -16,7 +16,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import SearchResults from './components/SearchResults';
+import SearchResults from './containers/SearchResults';
 import SearchForm from './containers/SearchForm'
 
 function App() {
