@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default function Header() {
 
     return (
@@ -27,11 +28,11 @@ export default function Header() {
                         </a>
                     </span>
                     <span className="navbar-item">
-                        <a className="button is-white is-outlined" href="/trips">
+                        <a className="button is-white is-outlined" href="/mytrips">
                             <span className="icon">
                             <i className="fas fa-map-marked-alt"></i>
                             </span>
-                            <span>Trips</span>
+                            <span>My trips</span>
                         </a>
                     </span>
                    

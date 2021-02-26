@@ -18,7 +18,8 @@ import Hero from './components/Hero';
 import Mytrips from './components/Mytrips';
 import Footer from './components/Footer';
 import SearchResults from './containers/SearchResults';
-import SearchForm from './containers/SearchForm'
+import SearchForm from './containers/SearchForm';
+
 
 function App() {
   return (
@@ -32,16 +33,15 @@ function App() {
                 <Route exact path = '/'>
                   <Hero />
                   <SearchForm />
-                  <h1 className="title">Coming soon!</h1>
                 </Route>
                 <Route path = '/results'>
                   <SearchResults />
                 </Route>
+                <Route path = '/mytrips'>
+                  <Mytrips />
+                </Route>
               </Switch>
             </div>
-              <div className="container">
-                  <Mytrips />
-                </div>
             <Footer />
           </section>
       </div>
