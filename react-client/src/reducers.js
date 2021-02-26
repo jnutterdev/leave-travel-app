@@ -4,11 +4,12 @@ import {
 } from './actions';
 
 export function userSearch(state, action) {
+    console.log(action.payload);
     switch(action.type) {
         case ADD_DESTINATION: 
             return {
                 ...state, 
-                [action.payload.destination]: state[action.payload.destination]
+                destination: [action.payload]
             }
         case ADD_DATES: 
             return {

@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import {
+    Link
+} from 'react-router-dom';
 
 const SearchForm = (props) => {
     const [ destination, setDestination ] = useState("");
 
     //James - this is what I added 
-    
+
     const handleSubmit = (event) => {
         console.log(destination);
         event.preventDefault();
@@ -35,9 +38,9 @@ const SearchForm = (props) => {
                         value=""
                     />
                 </label> */}
-                <input 
-                type="submit"
-                />
+                {/* <Link to = "/results"> */}
+                    <input type="submit"/>
+                {/* </Link> */}
             </form>
         </div>
 
