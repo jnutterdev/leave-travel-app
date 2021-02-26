@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import {
-    Link
+    useHistory
 } from 'react-router-dom';
 
 const SearchForm = (props) => {
+    let history = useHistory();
+
     const [ destination, setDestination ] = useState("");
+    const [ dates, setDates ] = useState("");
 
     //James - this is what I added 
 
     const handleSubmit = (event) => {
-        console.log(destination);
         event.preventDefault();
-        props.handleClick(destination);
+        props.handleClick(destination, dates);
+        history.push("/results");
     }
 
     return (
@@ -25,22 +28,21 @@ const SearchForm = (props) => {
                         setDestination(event.target.value)}
                     />
                 </label>
-                {/* <label>
+                <label>
                     <input
                         type="date"
-                        value={props.dates}
-                        min="2021-01-01"
+                        value={dates}
+                        onChange={event => 
+                            setDates(event.target.value)}
                     />
-                </label> */}
-                {/* <label>
+                </label> 
+                <label>
                     <input
                         type="number"
                         value=""
                     />
-                </label> */}
-                {/* <Link to = "/results"> */}
-                    <input type="submit"/>
-                {/* </Link> */}
+                </label> 
+                <input type="submit" />
             </form>
         </div>
 

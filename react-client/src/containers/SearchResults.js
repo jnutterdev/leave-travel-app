@@ -1,11 +1,13 @@
-import SearchForm from '../components/SearchForm';
+import SearchResults from '../components/SearchResults';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
     return {
-        destination: state.destination, 
+        // propName seen by React : value-in-state
+        destination: state.destination,
         dates: state.dates
+
     }
 }
 
-export default connect(mapStateToProps)(SearchForm);
+export default connect(mapStateToProps)(SearchResults);
