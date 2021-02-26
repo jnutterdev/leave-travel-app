@@ -15,10 +15,10 @@ const SearchForm = (props) => {
     }
 
     return (
-        <div>
+        <div className="container">
             <form onSubmit = { handleSubmit }>
                 <label>
-                    <input
+                    <input className="input is-rounded is-primary"
                         type="text"
                         value={destination}
                         onChange={event => 
@@ -39,7 +39,7 @@ const SearchForm = (props) => {
                     />
                 </label> */}
                 <Link to = "/results">
-                    <input type="submit"/>
+                    <button className="button is-primary" type="submit">Search</button>
                 </Link>
             </form>
         </div>

@@ -51,7 +51,7 @@ class SearchResults extends React.Component {
                        <div className="card">
                        <div className="card-image">
                          <figure className="image is-16by9">
-                           <img src="http://placeimg.com/300/300/nature" alt={ place.name  } />
+                           <img src={ place.thumbnail ? place.thumbnail : "http://placeimg.com/300/300/nature" } alt={ place.name  } />
                          </figure>
                        </div>
                        <div className="card-content">
