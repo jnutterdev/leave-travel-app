@@ -21,7 +21,7 @@ router.post('/mytrips', trips_controller.mytrips_create_post);
 }); */
 
 // GET My Trips
-router.get('/mytrips', trips_controller.mytrips_findOneUser_get);
+router.get('/mytrips/:userId', trips_controller.mytrips_get);
 
 // add new reservation (put for new)
 
