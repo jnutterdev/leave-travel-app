@@ -45,35 +45,37 @@ class SearchResults extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <div className="columns is-mobile is-multiline is-centered">
+                <div className="container p-fix">
+                    <div className="columns is-mobile is-multiline is-centered">
                     {places.map(place => (
                         <div className="column is-one-third">
                        <div className="card">
                        <div className="card-image">
                          <figure className="image is-16by9">
-                           <img src={ place.thumbnail_url } alt={ place.name  } />
+                           <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/640/480/nature"} alt={ place.name  } />
                          </figure>
                        </div>
                        <div className="card-content">
                          <div className="media">
                            <div className="media-left">
                              <figure className="image is-48x48">
-                               <i class="fas fa-compass"></i>
+                             <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/48/48/nature"} alt={ place.name  } />
                              </figure>
                            </div>
                            <div className="media-content">
-                             <p className="title is-4">{place.name}</p>
+                             <p className="title is-6">{place.name}</p>
                              <p className="subtitle is-6"><a href={place.url} target="_blank" rel="noreferrer">{place.name_suffix}</a></p>
                            </div>
                          </div>
                      
                          <div className="content">
-                           {place.perex}    
+                           <p>{place.perex}</p>
                          </div>
                        </div>
                      </div>
                      </div>
                     ))}
+                </div>
                 </div>
             );
         }
