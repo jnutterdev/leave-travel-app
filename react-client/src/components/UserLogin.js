@@ -5,55 +5,37 @@ export default function UserLogin() {
     return (
         <>
 
-    <div className="hero is-primary is-large bg-image"> 
-        <div className="hero-body">
-            <div className="container has-text-centered">
-               
-            </div>
-        </div>
-
-            <div className="hero-foot is-centered">
-                <nav className="tabs is-boxed is-fullwidth">
-                <div className="container">
-                    <ul>
-                        <li className="is-active"><a href="/routes">Routes</a></li>
-                        <li><a href="/stay">Where to stay</a></li>
-                        <li><a href="/checklist">Checklist</a></li>
-                    </ul>
-                </div>
-                </nav>
-            </div>
-        </div>
-        <div className="container bg-trips p-fix">
-            <div className="columns is-centered">
-                <div className="column is-half is-centered">
-                    <ul className="menu-list">
-                        <li className="is-active">
-                            <a href="/trips">Route</a>
-                                <ul className="list-line">
-                                    <li><sub>Start from</sub></li>
-                                    <li className="bg-line">|</li>
-                                    <li><a href="/trip" className=""><h1>Gatlinburg - 4 nights</h1></a></li>
-                                    <li className="bg-line">|</li>
-                                    <li><a href="/trip" className=""><h1>Tampa - 2 nights</h1></a></li>
-                                    <li className="bg-line">|</li>
-                                    <li><sub>End at</sub></li>
-                                </ul>
-                        </li>
-                        <li><button className="button is-white is-primary">Edit</button></li>
-                    </ul>
-                </div>
-                <div className="column">
-                    <ul>
-                        <li>
-                           
-                        </li>
-                        <li>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-        </div>
+            <div className="hero is-primary">
+                <div className="hero-body">
+                    <h1 className="title has-text-centered is-size-2">Login</h1>
+                        <div className="columns is-centered">
+                            <div className="column is-half">
+                                <div className="notification is-light">
+                                    <p className="subtitle has-text-black">Login to access your trip from any device</p>
+                                    <div className="field">
+                                        <label className="label has-text-left">Name</label>
+                                            <p className="control has-icons-left has-icons-right">
+                                                <input className="input" type="email" placeholder="Email" />
+                                                <span className="icon is-small is-left">
+                                                    <i className="fas fa-envelope"></i>
+                                                </span>
+                                            </p>
+                                    </div>
+                                    <div className="field">
+                                        <label className="label has-text-left">Password</label>
+                                            <p className="control has-icons-left">
+                                                <input className="input" type="password" placeholder="Password" />
+                                                    <span className="icon is-small is-left">
+                                                        <i className="fas fa-lock"></i>
+                                                    </span>
+                                            </p>
+                                    </div>
+                                     <a className="button is-primary is-rounded is-outlined is-medium" href="/">Login</a>
+                                    </div>
+                                </div>
+                             </div>
+                         </div>
+                    </div>
         </>
     )
 }

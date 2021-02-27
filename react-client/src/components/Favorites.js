@@ -9,8 +9,8 @@ export default function Favorites() {
 
     return (
         <>
-
-    <div className="hero is-success is-small "> 
+   
+    <div className="hero is-success is-small bg-fav "> 
     <div className="hero-body">
             <div className="container has-text-left">
                <h1 className="is-size-1">Favorites</h1>
@@ -28,8 +28,8 @@ export default function Favorites() {
                 </nav>
             </div>
         </div>
-        <div className="container bg-trips p-fix">
-            <div className="columns is-centered">
+        <div className="hero is-halfheight container bg-trips p-fix block">
+            <div className="columns is-centered ">
                 <div className="column">
                    <p className="pl-5 has-text-left">You have no favorites saved!</p>
                    <div className="field block pl-4 pt-4">
@@ -58,6 +58,7 @@ export default function Favorites() {
                 </div>
         </div>
         </div>
+        
         </>
     )
 }
