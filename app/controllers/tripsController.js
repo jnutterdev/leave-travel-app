@@ -1,5 +1,6 @@
 // const db = require('../../models');
 const {MyTrips} = require('../../models');
+
 // const Trips = db.mytrips;
 
 // CREATES Trip (enters trip details, selects place, saves)
@@ -15,7 +16,7 @@ exports.mytrips_create_post = async function(req, res) {
       travelDates,
      });
    
-    // const { dataValues } = newTrip;
+// const { dataValues } = newTrip;
     res.send('/mytrips');
   }
   
@@ -27,6 +28,7 @@ exports.mytrips_findOneUser_get = async function(req, res) {
     
     res.send('/mytrips');
   };
+
 // add new reservation (put for new)
 
 // update trip (patch for update)
