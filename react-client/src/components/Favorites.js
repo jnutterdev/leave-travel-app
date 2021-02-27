@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import {
+    useHistory
+} from 'react-router-dom';
 
 export default function Favorites() {
+
+    const [ destination, setDestination ] = useState("");
 
     return (
         <>
 
-    <div className="hero is-primary is-large bg-image"> 
-        <div className="hero-body">
-            <div className="container has-text-centered">
-               
+    <div className="hero is-success is-small "> 
+    <div className="hero-body">
+            <div className="container has-text-left">
+               <h1 className="is-size-1">Favorites</h1>
             </div>
         </div>
 
@@ -16,9 +21,8 @@ export default function Favorites() {
                 <nav className="tabs is-boxed is-fullwidth">
                 <div className="container">
                     <ul>
-                        <li className="is-active"><a href="/routes">Routes</a></li>
-                        <li><a href="/stay">Where to stay</a></li>
-                        <li><a href="/checklist">Checklist</a></li>
+                        <li className="is-active"><a href="/routes">Trips</a></li>
+                        <li><a href="/todo">Things to do</a></li>
                     </ul>
                 </div>
                 </nav>
@@ -26,22 +30,22 @@ export default function Favorites() {
         </div>
         <div className="container bg-trips p-fix">
             <div className="columns is-centered">
-                <div className="column is-half is-centered">
-                    <ul className="menu-list">
-                        <li className="is-active">
-                            <a href="/trips">Route</a>
-                                <ul className="list-line">
-                                    <li><sub>Start from</sub></li>
-                                    <li className="bg-line">|</li>
-                                    <li><a href="/trip" className=""><h1>Gatlinburg - 4 nights</h1></a></li>
-                                    <li className="bg-line">|</li>
-                                    <li><a href="/trip" className=""><h1>Tampa - 2 nights</h1></a></li>
-                                    <li className="bg-line">|</li>
-                                    <li><sub>End at</sub></li>
-                                </ul>
-                        </li>
-                        <li><button className="button is-white is-primary">Edit</button></li>
-                    </ul>
+                <div className="column">
+                   <p className="pl-5 has-text-left">You have no favorites saved!</p>
+                   <div className="field block pl-4 pt-4">
+                    <label className="control has-icons-left has-icons-right">
+                        <input className="input is-light is-light"
+                            type="text"
+                            value={ destination }
+                            placeholder="Search for a favorite place"
+                            onChange={event => 
+                            setDestination(event.target.value)}
+                        />
+                        <span className="icon is-small is-left">
+                            <i className="fas fa-search"></i>
+                        </span>
+                    </label>
+                </div>
                 </div>
                 <div className="column">
                     <ul>
