@@ -15,8 +15,12 @@ import './App.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Favorites from './components/Favorites';
 import Mytrips from './components/Mytrips';
+import UserLogin from './components/UserLogin';
+import Todo from './components/Todo';
 import Footer from './components/Footer';
+
 import SearchResults from './containers/SearchResults';
 import SearchForm from './containers/SearchForm';
 
@@ -34,11 +38,20 @@ function App() {
                   <Hero />
                   <SearchForm />
                 </Route>
+                <Route path = '/favorites'>
+                  <Favorites />
+                </Route>
                 <Route path = '/results'>
                   <SearchResults />
                 </Route>
                 <Route path = '/mytrips'>
                   <Mytrips />
+                </Route>
+                <Route path = '/login'>
+                  <UserLogin />
+                </Route>
+                <Route path = '/todo'>
+                  <Todo />
                 </Route>
               </Switch>
             </div>
