@@ -2,7 +2,7 @@
 const { MyTrips, User } = require('../../models');
 // const Trips = db.mytrips;
 
-// CREATES Trip (enters trip details, selects place, saves)
+// CREATES Trip (enters trip details, selects place, saves - tested and works)
 exports.mytrips_create_post = async function(req, res) {
       
     const { placeId, place, userId, reservations, travelDates} = req.body;
@@ -20,28 +20,48 @@ exports.mytrips_create_post = async function(req, res) {
   }
   
 
-// get all trips
+// get all trips (tested and works)
 exports.mytrips_get = async function (req, res) 
  {
     
-    // const oneUser = await MyTrips.findAll(req.params.userId);
     const oneUser = await MyTrips.findAll({
         userId: req.param.userId,
     });
     res.send(oneUser);
 };
 
-
-/* exports.mytrips_findOneUser_get = async function(req, res) {
-
-    const MyTrips = await MyTrips.findAll()
+// get a single trip
+exports.mytrips_get = async function (req, res) 
+ {
     
-    res.send('/mytrips/:userId');
-  }; */
+    const oneTrip = await MyTrips.findOne({
+        id: req.param.id,
+    });
+    res.send(oneTrip);
+};
 
-// add new reservation (put for new)
+// update trip (patch for update - tested and works)
+exports.mytrips_update_patch = async function(req, res) { 
+    const { id } = req.params;
 
-// update trip (patch for update)
+    const updatedTrip = await MyTrips.update(req.body, {
+        where: {
+            id
+        }
+    });
 
-// delete a trip
+    res.send(updatedTrip);
+};
 
+// delete a trip (tested and works)
+exports.mytrips_delete_post = async function(req, res) {
+    const { id } = req.params;
+    
+    const deletedTrip = await MyTrips.destroy({
+     where: {
+       id
+        }
+    })
+  
+    res.send(deletedTrip);
+  };
