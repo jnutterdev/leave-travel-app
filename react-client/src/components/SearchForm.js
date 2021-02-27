@@ -53,6 +53,8 @@ const SearchForm = (props) => {
                         type="number"
                         value={ numberOfPeople }
                         placeholder="Number of people"
+                        min="0"
+                        max="100"
                         onChange={event => 
                             setNumberOfPeople(event.target.value)}
                     />
