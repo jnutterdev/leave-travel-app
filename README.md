@@ -25,7 +25,10 @@ An app created with PostgreSQL, Express.js, React.js, and Node.js
 - [PostgreSQL](https://www.postgresql.org/)
 - [Sass](https://sass-lang.com/)
 - [Bulma](https://bulma.io/)
-- [fontawesome](https://fontawesome.com/)
+
+## Additional resources
+- Pictures from [Pexels](https://www.pexels.com/)
+- Icons from [fontawesome](https://fontawesome.com/) and [Flaticon](https://www.flaticon.com/)
 
 ## Hosting
 
