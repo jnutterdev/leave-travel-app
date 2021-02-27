@@ -2,7 +2,7 @@
 
 ## Description
 
-An app created with PostgreSQL, Express.js, React.js, and Node.js
+A travel itenerary app created with PostgreSQL, Express.js, React.js, and Node.js
 
 ## Install
 
