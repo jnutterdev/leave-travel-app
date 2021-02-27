@@ -10,7 +10,7 @@ export default function Favorites() {
     return (
         <>
    
-    <div className="hero is-success is-small bg-fav "> 
+    <div className="hero is-primary is-small bg-fav "> 
     <div className="hero-body">
             <div className="container has-text-left">
                <h1 className="is-size-1">Favorites</h1>
