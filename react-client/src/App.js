@@ -22,7 +22,7 @@ import Todo from './components/Todo';
 import Footer from './components/Footer';
 
 import SearchResults from './containers/SearchResults';
-import SearchForm from './containers/SearchForm';
+
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
               <Switch>
                 <Route exact path = '/'>
                   <Hero />
-                  <SearchForm />
+                  
                 </Route>
                 <Route path = '/favorites'>
                   <Favorites />
