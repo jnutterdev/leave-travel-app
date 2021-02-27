@@ -5,8 +5,8 @@ function mapStateToProps(state) {
     return {
         // propName seen by React : value-in-state
         destination: state.destination,
-        dates: state.dates
-
+        dates: state.dates,
+        numberOfPeople: state.numberOfPeople
     }
 }
 
