@@ -9,6 +9,22 @@ html {
     background-size: 1000px;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 25vh;
+}
+
 .navbar {
     background-image: linear-gradient(90deg, $pink 10%, $orange 90%);
 }
@@ -45,17 +61,25 @@ h5 {
 .bg-main {
     background: url("../static/img/mountains.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .bg-image {
     background: url("../static/img/vw2.jpg");
-    background-position: top;
+    background-position: center -200px;
     background-size: 1000px;
     background-repeat: no-repeat;
 }
 
 .bg-trips {
     background: white;
+}
+
+.bg-fav {
+    background: url("../static/img/mountains.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .menu-list li ul {
