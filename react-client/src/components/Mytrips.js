@@ -13,10 +13,10 @@ export default function Mytrips() {
     return (
         <>
 
-    <div className="hero is-primary is-medium bg-image"> 
+    <div className="hero is-primary is-small bg-image"> 
         <div className="hero-body">
-            <div className="container has-text-centered">
-               
+        <div className="container has-text-left">
+               <h1 className="is-size-1">My trips</h1>
             </div>
         </div>
 
