@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchResults.css';
 
 class SearchResults extends React.Component {
     constructor(props) {
@@ -46,7 +45,7 @@ class SearchResults extends React.Component {
         } else {
             return (
                 <div className="container p-fix">
-                    <div className="columns is-mobile is-multiline is-centered">
+                    <div className="columns is-mobile is-multiline">
                     {places.map(place => (
                         <div className="column is-one-third">
                        <div className="card">
@@ -54,6 +53,9 @@ class SearchResults extends React.Component {
                          <figure className="image is-16by9">
                            <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/640/480/nature"} alt={ place.name  } />
                          </figure>
+                         <span className="icon is-small fav-dest">
+                            <a href="#like" className="likes"><i className="fa fa-heart" aria-hidden="true"></i></a> 
+                         </span>
                        </div>
                        <div className="card-content">
                          <div className="media">
@@ -62,13 +64,13 @@ class SearchResults extends React.Component {
                              <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/48/48/nature"} alt={ place.name  } />
                              </figure>
                            </div>
-                           <div className="media-content">
+                           <div className="media-content has-text-left">
                              <p className="title is-6">{place.name}</p>
                              <p className="subtitle is-6"><a href={place.url} target="_blank" rel="noreferrer">{place.name_suffix}</a></p>
                            </div>
                          </div>
                      
-                         <div className="content">
+                         <div className="content has-text-left">
                            <p>{place.perex}</p>
                          </div>
                        </div>

@@ -113,3 +113,18 @@ h5 {
 .b-shadow {
     box-shadow: 2px 2px 4px $brown;
 }
+
+.fav-dest {
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    z-index: 1;
+}
+
+a.likes {
+    color: white;
+}
+
+a.likes:hover {
+    color: $pink;
+}
