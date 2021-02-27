@@ -15,7 +15,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       userID: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'User',
+          key: 'id',
+          as: 'userId'
+        }
       },
       reservations: {
         type: Sequelize.STRING
@@ -32,6 +38,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+  
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('MyTrips');

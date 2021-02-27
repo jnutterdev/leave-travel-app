@@ -1,24 +1,31 @@
 'use strict';
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('MyTrips', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
+      placeId: {
         type: Sequelize.STRING
       },
-      lastName: {
+      place: {
         type: Sequelize.STRING
       },
-      email: {
-        type: Sequelize.STRING
+      userId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Users',
+          key: 'id',
+          as: 'userId'
+        }
       },
-      myTripId: {
-        type: Sequelize.INTEGER
+      reservations: {
+        type: Sequelize.STRING
       },
       travelDates: {
         type: Sequelize.STRING
@@ -33,7 +40,8 @@ module.exports = {
       }
     });
   },
+
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('MyTrips');
   }
 };

@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      MyTrips.belongsTo(models.User, {
+        foreignKey: 'userId',
+        onDelete: 'CASCADE'
+      });
     }
   };
   MyTrips.init({
     placeId: DataTypes.STRING,
     place: DataTypes.STRING,
-    userID: DataTypes.STRING,
+    userId: DataTypes.INTEGER,
     reservations: DataTypes.STRING,
     travelDates: DataTypes.STRING
   }, {
