@@ -1,5 +1,3 @@
-import SearchForm from '../containers/SearchForm';
-
 import React from 'react';
 
 import SearchForm from '../containers/SearchForm';
