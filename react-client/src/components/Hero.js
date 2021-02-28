@@ -2,6 +2,8 @@ import SearchForm from '../containers/SearchForm';
 
 import React from 'react';
 
+import SearchForm from '../containers/SearchForm';
+
 export default function Hero(){
     return(
         <section className="hero is-primary is-medium bg-main">
@@ -15,17 +17,17 @@ export default function Hero(){
                          Create a fully customized
                             day by day itinerary for free
                         </p>
+                    </div>
+                <div className="column">
+                  <div class="container b-shadow">
+                    <div className="notification is-light p-3">
+                      <p className="is-size-3" >Plan your next trip</p>
+                      <SearchForm />
+                    </div>
+                  </div>
                 </div>
-            <div className="column">
-            <div class="container b-shadow">
-                <div className="notification is-light p-3">
-                    <p className="is-size-3" >Plan your next trip</p>
-                    <SearchForm />
-                </div>
-            </div>
-            </div>
             </div>
         </div>
-        </section>
+     </section>
     )
 }

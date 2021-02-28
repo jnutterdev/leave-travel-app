@@ -20,10 +20,8 @@ import Mytrips from './components/Mytrips';
 import UserLogin from './components/UserLogin';
 import Todo from './components/Todo';
 import Footer from './components/Footer';
-
 import SearchResults from './containers/SearchResults';
-
-
+import ItineraryOptions from './components/ItineraryOptions';
 
 function App() {
   return (
@@ -35,8 +33,7 @@ function App() {
               <Header />
               <Switch>
                 <Route exact path = '/'>
-                  <Hero />
-                  
+                  <Hero />                  
                 </Route>
                 <Route path = '/favorites'>
                   <Favorites />
@@ -46,6 +43,9 @@ function App() {
                 </Route>
                 <Route path = '/mytrips'>
                   <Mytrips />
+                </Route>
+                <Route Path = '/itineraries'>
+                  <ItineraryOptions />
                 </Route>
                 <Route path = '/login'>
                   <UserLogin />
