@@ -2,7 +2,7 @@
 
 ## Description
 
-An app created with PostgreSQL, Express.js, React.js, and Node.js
+A travel itenerary app created with PostgreSQL, Express.js, React.js, and Node.js
 
 ## Install
 
@@ -10,7 +10,9 @@ An app created with PostgreSQL, Express.js, React.js, and Node.js
 
 `cd didactic-guacamole`
 
-`npm install`
+`npm run build`
+
+`npm start`
 
 
 
@@ -18,9 +20,15 @@ An app created with PostgreSQL, Express.js, React.js, and Node.js
 
 - [Express.js](http://expressjs.com/)
 - [React](https://reactjs.org/)
-- [Bulma](https://bulma.io/)
+- [React-Redux](https://react-redux.js.org/)
 - [Node.js](https://nodejs.org/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Sass](https://sass-lang.com/)
+- [Bulma](https://bulma.io/)
+
+## Additional resources
+- Pictures from [Pexels](https://www.pexels.com/)
+- Icons from [fontawesome](https://fontawesome.com/) and [Flaticon](https://www.flaticon.com/)
 
 ## Hosting
 

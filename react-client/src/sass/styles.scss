@@ -9,6 +9,22 @@ html {
     background-size: 1000px;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: 25vh;
+}
+
 .navbar {
     background-image: linear-gradient(90deg, $pink 10%, $orange 90%);
 }
@@ -25,8 +41,9 @@ figure img {
 
 p,
 li,
-button {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+button,
+form {
+    font-family: $util-font;
 }
 
 h1,
@@ -34,22 +51,43 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: $family-sans-serif;
+    font-family: $head-font;
 }
 
 .react-calendar__tile--now {
     background: $orange;
 }
 
-.bg-image {
-    background: url("../static/img/vw2.jpg");
-    background-position: top;
-    background-size: 1000px;
+.bg-main {
+    background: url("../static/img/mountains.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-image {
+    background: url("../static/img/vw3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-login {
+    background: url("../static/img/beachdark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-trips {
     background: white;
+}
+
+.bg-fav {
+    background: url("../static/img/mountains.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .menu-list li ul {
@@ -73,4 +111,27 @@ h5 {
 .card {
     height: 450px;
     overflow: hidden;
+}
+
+.t-shadow {
+    text-shadow: 1px 1px 2px $brown;
+}
+
+.b-shadow {
+    box-shadow: 2px 2px 4px $brown;
+}
+
+.fav-dest {
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    z-index: 1;
+}
+
+a.likes {
+    color: white;
+}
+
+a.likes:hover {
+    color: $pink;
 }

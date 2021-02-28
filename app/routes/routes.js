@@ -9,24 +9,30 @@ const users_controller = require('../controllers/usersController');
 
 // MY TRIPS ROUTES //
 
-// CREATES trip (enters trip details, selects place, saves)
+// CREATES trip (enters trip details, selects place, saves - tested and works)
 router.post('/mytrips', trips_controller.mytrips_create_post);
 
-/* async (req,res) => {
-    try {
-        console.log(req.body);
-    } catch (error) {
-        console.error(err.message);
-    }
-}); */
+// GET all My Trips (tested and works)
+router.get('/mytrips/:userId', trips_controller.mytrips_get);
 
-// GET My Trips
-router.get('/mytrips', trips_controller.mytrips_findOneUser_get);
-
-// add new reservation (put for new)
-
-// update trip (patch for update)
-
-// delete a trip
+// GET a single trip  (tested and works)
+router.get('/mytrips/:id', trips_controller.mytrips_get);
 
 
+// update trip (patch for update - tested and works)
+router.patch('/mytrips/:id', trips_controller.mytrips_update_patch);
+
+// delete a trip (tested and works)
+router.delete('/mytrips/:id', trips_controller.mytrips_delete_post);
+
+
+// USER ROUTES
+
+//create a user - register (tested and works)
+router.post('/user', users_controller.user_create_post);
+
+//get a user - login (tested and works)
+router.get('/user/:id', users_controller.user_get);
+
+//delete a user - delete acct
+router.delete('/user/:id', users_controller.user_delete_post); 

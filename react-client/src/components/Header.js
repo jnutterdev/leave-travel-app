@@ -37,9 +37,9 @@ export default function Header() {
                     </span>
                    
                     <span className="navbar-item">
-                        <a className="button is-white is-primary" href="#login">
+                        <a className="button is-white is-primary" href="/login">
                             <span className="icon">
-                            <i className="fas fa-user-plus"></i>
+                                <i className="fas fa-user-plus"></i>
                             </span>
                             <span>Login</span>
                         </a>

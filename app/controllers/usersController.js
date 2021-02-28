@@ -1,90 +1,42 @@
-const db = require('../../models');
-const Users = db.Users;
-const Sequelize = require('sequelize');
-
-//User Table
+const { User } = require('../../models');
 
 
-exports.user_profile_page = async(req, res) => {
-
-    try {
-        const results = res.send();
-    } catch (err) {
-        if (err.response) {
-            console.log(err.response.data);
-        } else if (err.request) {
-            console.log(err.request);
-        } else {
-            console.error("Error", err.message);
-        }
-    }
-
-}
-
-/* exports.user_register_page = (req, res) => {
-    try {
-        res.render('./partials/register');
-    } catch (err) {
-        if (err.response) {
-            console.log(err.response.data);
-        } else if (err.request) {
-            console.log(err.request);
-        } else {
-            console.error("Error", err.message);
-        }
-    }
-}
-
-// user signs up - tested and working
+// create a user - register (tested and works)
 exports.user_create_post = async function(req, res) {
-    console.log(req.body);
+  
+    const { email, firstName, lastName, myTripId, travelDates } = req.body;
 
-    try {
-        if (!req.body.email || !req.body.password) {
-            res.status(400).send({
-                message: "You need an email & password to create an account!"
-            });
-            return;
-        }
+    const newUser = await User.create({
+        email,
+        firstName,
+        lastName,
+        myTripId,
+        travelDates,
+    });
 
-        const { email, name, password } = req.body;
+    
+    res.send(newUser);
+}
 
-        const User = await db.User.create({
-            password,
-            email,
-            name
-        });
+//get a user - login (tested and works)
+exports.user_get = async function (req, res) 
+ {
+    
+    const Login = await User.findOne({
+        id: req.param.id,
+    });
+    res.send(Login);
+};
 
-        res.render('./partials/userprofile', { name: name, email: email });
-
-    } catch (err) {
-        if (err.response) {
-            console.log(err.response.data);
-        } else if (err.request) {
-            console.log(err.request);
-        } else {
-            console.error("Error", err.message);
-        }
-    }
-} */
-
-//update user - tested and working
-
-/* exports.user_update_patch = async function(req, res) {
-    // if (!req.body.username || !req.body.password) {
-    //     res.status(400).send({
-    //         message: "Need username and password"
-    //     })
-    // return;
-    // }
+//delete a user - delete acct (tested and works)
+exports.user_delete_post = async function(req, res) {
     const { id } = req.params;
-
-    const updatedUser = await db.User.update(req.body, {
-        where: {
-            id
+    
+    const deletedUser = await User.destroy({
+     where: {
+       id
         }
     })
-
-    res.json(updatedUser);
-}
- */
+  
+    res.send(deletedUser);
+  };

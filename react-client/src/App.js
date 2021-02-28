@@ -15,7 +15,10 @@ import './App.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Favorites from './components/Favorites';
 import Mytrips from './components/Mytrips';
+import UserLogin from './components/UserLogin';
+import Todo from './components/Todo';
 import Footer from './components/Footer';
 import SearchResults from './containers/SearchResults';
 import ItineraryOptions from './components/ItineraryOptions';
@@ -30,7 +33,10 @@ function App() {
               <Header />
               <Switch>
                 <Route exact path = '/'>
-                  <Hero />
+                  <Hero />                  
+                </Route>
+                <Route path = '/favorites'>
+                  <Favorites />
                 </Route>
                 <Route path = '/results'>
                   <SearchResults />
@@ -40,6 +46,12 @@ function App() {
                 </Route>
                 <Route Path = '/itineraries'>
                   <ItineraryOptions />
+                </Route>
+                <Route path = '/login'>
+                  <UserLogin />
+                </Route>
+                <Route path = '/todo'>
+                  <Todo />
                 </Route>
               </Switch>
             </div>

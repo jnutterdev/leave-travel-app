@@ -13,10 +13,10 @@ export default function Mytrips() {
     return (
         <>
 
-    <div className="hero is-primary is-large bg-image"> 
+    <div className="hero is-success is-small bg-image"> 
         <div className="hero-body">
-            <div className="container has-text-centered">
-               
+        <div className="container has-text-left">
+               <h1 className="is-size-1">My trips</h1>
             </div>
         </div>
 
@@ -25,8 +25,8 @@ export default function Mytrips() {
                 <div className="container">
                     <ul>
                         <li className="is-active"><a href="/routes">Routes</a></li>
-                        <li><a href="/stay">Where to stay</a></li>
-                        <li><a href="/checklist">Checklist</a></li>
+                        <li><a href="#stay">Where to stay</a></li>
+                        <li><a href="#checklist">Checklist</a></li>
                     </ul>
                 </div>
                 </nav>
