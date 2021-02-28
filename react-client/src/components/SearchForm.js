@@ -47,6 +47,7 @@ const SearchForm = (props) => {
                     <input className="input is-primary is-light"
                         type="number"
                         value={ numberOfPeople }
+                        min="1"
                         onChange={event => 
                             setNumberOfPeople(event.target.value)}
                     />
