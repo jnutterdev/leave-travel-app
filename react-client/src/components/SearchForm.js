@@ -39,18 +39,7 @@ const SearchForm = (props) => {
                 </label>
                 <label className="control has-icons-left">
                     <input className="input mb-3"
-                        type="Trip start date"
-                        value={ dates }
-                        onChange={event => 
-                        setDates(event.target.value)}
-                    />
-                    <span className="icon is-small is-left">
-                            {/* <i className="fas fa-calendar"></i> */}
-                        </span>
-                </label> 
-                <label className="control has-icons-left">
-                    <input className="input mb-3"
-                        type="Trip end date"
+                        type="date"
                         value={ dates }
                         onChange={event => 
                         setDates(event.target.value)}

@@ -44,7 +44,7 @@ function App() {
                 <Route path = '/mytrips'>
                   <Mytrips />
                 </Route>
-                <Route path = '/itineraries'>
+                <Route Path = '/itineraries'>
                   <ItineraryOptions />
                 </Route>
                 <Route path = '/login'>
