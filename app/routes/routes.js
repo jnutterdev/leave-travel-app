@@ -34,5 +34,5 @@ router.post('/user', users_controller.user_create_post);
 //get a user - login (tested and works)
 router.get('/user/:id', users_controller.user_get);
 
-//delete a user - delete acct
+//delete a user - delete acct (tested and works)
 router.delete('/user/:id', users_controller.user_delete_post); 
