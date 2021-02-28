@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SearchForm from '../containers/SearchForm';
+
 export default function Hero(){
     return(
         <section className="hero is-primary is-medium">
@@ -15,7 +17,8 @@ export default function Hero(){
                 </div>
             <div className="column">
             <figure className="is-square">
-                <img className="is-rounded" src={process.env.PUBLIC_URL+"/img/beach02.jpg"} width="200" height="200" alt="Beach scene" />
+                {/* <img className="is-rounded" src={process.env.PUBLIC_URL+"/img/beach02.jpg"} width="200" height="200" alt="Beach scene" /> */}
+                <SearchForm />
             </figure>
             </div>
             </div>

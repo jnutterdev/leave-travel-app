@@ -18,8 +18,7 @@ import Hero from './components/Hero';
 import Mytrips from './components/Mytrips';
 import Footer from './components/Footer';
 import SearchResults from './containers/SearchResults';
-import SearchForm from './containers/SearchForm';
-
+import ItineraryOptions from './components/ItineraryOptions';
 
 function App() {
   return (
@@ -32,13 +31,15 @@ function App() {
               <Switch>
                 <Route exact path = '/'>
                   <Hero />
-                  <SearchForm />
                 </Route>
                 <Route path = '/results'>
                   <SearchResults />
                 </Route>
                 <Route path = '/mytrips'>
                   <Mytrips />
+                </Route>
+                <Route Path = '/itineraries'>
+                  <ItineraryOptions />
                 </Route>
               </Switch>
             </div>
