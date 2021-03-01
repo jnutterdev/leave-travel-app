@@ -78,13 +78,13 @@ class SearchResults extends React.Component {
                     <div className="columns is-mobile is-multiline">
                     {places.map(place => (
                         <div className="column is-one-third">
-                        <div className="card">
+                        <div className="card" style={{ height: '325px' }}>
                         <div className="card-image">
                             <figure className="image is-16by9">
                                 <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/640/480/nature"} alt={ place.name } />
                             </figure>
                          <span className="icon is-small fav-dest">
-                            <a href="#" className="likes" onClick={this.handleClick.bind(this, place)}><i className="fa fa-heart likes" aria-hidden="true"></i></a>
+                            <a href="#" className="likes"><i className="fa fa-heart likes" aria-hidden="true"></i></a>
                          </span>
                        </div>
                        <div className="card-content">
@@ -100,10 +100,13 @@ class SearchResults extends React.Component {
                            </div>
                          </div>
                      
-                         <div className="content has-text-left">
-                           <p>{place.perex}</p>
-                         </div>
+                         {/* <div className="content has-text-left" style= {{ height: 96 }}>
+                           <p style={{height: 80}}>{place.perex}</p>
+                         </div> */}
                        </div>
+                        <div style = {{ display: "flex", justifyContent: "center", alignItems: "center", bottom: 10 }}>
+                            <button style= {{display: "float"}} className="button" onClick={this.handleClick.bind(this, place)}>Add To Trip</button>
+                        </div>
                      </div>
                      </div>
                     ))}
