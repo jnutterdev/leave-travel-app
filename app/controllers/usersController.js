@@ -1,4 +1,5 @@
 const { User } = require('../../models');
+const pool = require('../../models');
 
 
 // create a user - register (tested and works)
@@ -6,14 +7,18 @@ exports.user_create_post = async function(req, res) {
   
     const { email, firstName, lastName, myTripId, travelDates } = req.body;
 
-    const newUser = await User.create({
+    const newUser = await User.findOrCreate({ 
+        defaults: {
         email,
         firstName,
         lastName,
-        myTripId,
-        travelDates,
-    });
+    }, 
 
+    where: {
+        email
+      }
+    });
+// check if user exists
     
     res.send(newUser);
 }
