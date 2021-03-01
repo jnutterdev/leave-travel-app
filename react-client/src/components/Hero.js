@@ -17,7 +17,7 @@ export default function Hero(){
                         </p>
                     </div>
                 <div className="column">
-                  <div class="container b-shadow">
+                  <div className="container b-shadow">
                     <div className="notification is-light p-3">
                       <p className="is-size-3" >Plan your next trip</p>
                       <SearchForm />

@@ -98,6 +98,8 @@ h5 {
 
 .react-calendar {
     margin: auto;
+    width: 470px;
+    border: none;
 }
 
 .is-active {
@@ -134,4 +136,8 @@ a.likes {
 
 a.likes:hover {
     color: $pink;
+}
+
+.cal-style {
+    min-width: 100%;
 }

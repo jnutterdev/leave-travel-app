@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 
-export default function Mytrips() {
 
-    const [value, setValue] = useState(new Date());
-    
-    function onChange(nextValue) {
-        setValue(nextValue);
-      }
-
+export default function MyTrips() {
     return (
         <>
 
@@ -54,10 +46,7 @@ export default function Mytrips() {
                 <div className="column">
                     <ul>
                         <li>
-                            <Calendar 
-                            onChange={onChange}
-                            value={value}
-                            />
+                       
                         </li>
                         <li>
                         </li>
