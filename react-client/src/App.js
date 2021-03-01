@@ -16,7 +16,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Favorites from './components/Favorites';
-import Mytrips from './components/Mytrips';
+import Mytrips from './components/MyTrips';
 import UserLogin from './components/UserLogin';
 import Todo from './components/Todo';
 import Footer from './components/Footer';

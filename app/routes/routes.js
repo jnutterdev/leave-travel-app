@@ -13,10 +13,10 @@ const users_controller = require('../controllers/usersController');
 router.post('/mytrips', trips_controller.mytrips_create_post);
 
 // GET all My Trips (tested and works)
-router.get('/mytrips/:userId', trips_controller.mytrips_get);
+router.get('/mytrips', trips_controller.mytrips_foruser_get);
 
-// GET a single trip  (tested and works)
-router.get('/mytrips/:id', trips_controller.mytrips_get);
+// // GET a single trip  (tested and works)
+// router.get('/mytrips/:id', trips_controller.mytrips_get);
 
 
 // update trip (patch for update - tested and works)
