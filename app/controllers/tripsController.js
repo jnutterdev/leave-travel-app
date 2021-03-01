@@ -16,7 +16,7 @@ exports.mytrips_create_post = async function(req, res) {
      });
    
     // const { dataValues } = newTrip;
-    res.send('/mytrips');
+    res.send(newTrip);
   }
   
 
