@@ -23,7 +23,7 @@ function MyTrips() {
     
    
 
-export default function MyTrips() {
+// export default function MyTrips() {
     return (
         <>
 
