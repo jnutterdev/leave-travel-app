@@ -13,7 +13,6 @@ exports.user_create_post = async function(req, res) {
         myTripId,
         travelDates,
     });
-
     
     res.send(newUser);
 }
