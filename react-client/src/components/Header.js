@@ -20,11 +20,11 @@ export default function Header() {
             <div id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
                     <span className="navbar-item">
-                        <a className="button is-white is-outlined" href="/favorites">
+                        <a className="button is-white is-outlined" href="/itineraries">
                             <span className="icon">
                                 <i className="fa fa-home"></i>
                             </span>
-                            <span>Favorites</span>
+                            <span>Itineraries</span>
                         </a>
                     </span>
                     <span className="navbar-item">
