@@ -63,3 +63,5 @@ exports.mytrips_delete_post = async function(req, res) {
   
     res.send(deletedTrip);
   };
+
+  

@@ -6,6 +6,7 @@ module.exports = router;
 // Require controller modules
 const trips_controller = require('../controllers/tripsController');
 const users_controller = require('../controllers/usersController');
+const favorite_controller = require('../controllers/favoriteController')
 
 // MY TRIPS ROUTES //
 
@@ -24,6 +25,10 @@ router.patch('/mytrips/:id', trips_controller.mytrips_update_patch);
 
 // delete a trip (tested and works)
 router.delete('/mytrips/:id', trips_controller.mytrips_delete_post);
+
+// FAVORITE ROUTES
+// creates favorite (clicks heart on card)
+router.post('/favorite', favorite_controller.favorite_create_post);
 
 
 // USER ROUTES
