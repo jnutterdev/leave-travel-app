@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Calendar from './TripCalendar';
 
 import {
     useHistory
@@ -37,7 +38,7 @@ const SearchForm = (props) => {
                         </span>
                             
                 </label>
-                <label className="control has-icons-left">
+                {/* <label className="control has-icons-left">
                     <input className="input mb-3"
                         type="date"
                         value={ dates }
@@ -45,9 +46,9 @@ const SearchForm = (props) => {
                         setDates(event.target.value)}
                     />
                     <span className="icon is-small is-left">
-                            {/* <i className="fas fa-calendar"></i> */}
+                            <i className="fas fa-calendar"></i>
                         </span>
-                </label> 
+                </label>  */}
                 <label className="control has-icons-left">
                     <input className="input mb-3"
                         type="number"
@@ -62,6 +63,9 @@ const SearchForm = (props) => {
                             <i className="fas fa-user"></i>
                         </span>
                 </label>
+                <div className="mb-3">
+                    <Calendar className={['cal-style']} />
+                </div>
                     <useHistory to = "/results">
                         <button className="button is-primary" type="submit">Search</button>
                     </useHistory>

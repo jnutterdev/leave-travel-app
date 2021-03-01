@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+
 
 function MyTrips() {
 
-    // const [value, setValue] = useState(new Date());
+    
     const [places, setPlaces] = useState([]);
     
     useEffect(() => {
@@ -22,10 +21,9 @@ function MyTrips() {
         })
     }, [])
     
-    // function onChange(nextValue) {
-    //     setValue(nextValue);
-    //   }
+   
 
+export default function MyTrips() {
     return (
         <>
 

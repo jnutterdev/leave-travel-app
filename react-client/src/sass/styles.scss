@@ -98,6 +98,29 @@ h5 {
 
 .react-calendar {
     margin: auto;
+    width: 470px;
+    border: 1px solid white !important;
+    min-width: 100%;
+}
+
+element.style {
+    flex-basis: 14.2857%;
+    max-width: 14.2857%;
+    overflow: hidden;
+}
+
+.react-calendar button {
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+.react-calendar__tile--active {
+    background: $primary;
+}
+
+.react-calendar__tile--now {
+    background: $orange;
 }
 
 .is-active {
