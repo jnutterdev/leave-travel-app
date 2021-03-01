@@ -48,7 +48,7 @@ class SearchResults extends React.Component {
             reservations: ""
         }
 
-        const url='http://localhost:3001/mytrips'
+        const url= 'http://localhost:3001/mytrips'
         fetch((url), {
             method:"POST",
             headers: {
