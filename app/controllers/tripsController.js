@@ -5,7 +5,7 @@ const { MyTrips, User } = require('../../models');
 // CREATES Trip (enters trip details, selects place, saves - tested and works)
 exports.mytrips_create_post = async function(req, res) {
       
-    const { placeId, place, userId, reservations, travelDates} = req.body;
+    const { placeId, place, userId, reservations, travelDates, photo, placeURL } = req.body;
     
     const newTrip = await MyTrips.create({
       placeId,
@@ -13,6 +13,8 @@ exports.mytrips_create_post = async function(req, res) {
       userId,
       reservations,
       travelDates,
+      photo,
+      placeURL
      });
    
     // const { dataValues } = newTrip;
