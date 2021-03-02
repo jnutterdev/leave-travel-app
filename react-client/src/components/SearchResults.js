@@ -45,7 +45,9 @@ class SearchResults extends React.Component {
             place: place.name,
             // userId: ,
             travelDates: "",
-            reservations: ""
+            reservations: "",
+            photo: place.thumbnail_url,
+            placeURL: place.url
         }
 
         const url= 'http://localhost:3001/mytrips'
@@ -67,6 +69,7 @@ class SearchResults extends React.Component {
 
     render() {
         const { error, isLoaded, places } = this.state;
+        console.log(places)
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -84,7 +87,7 @@ class SearchResults extends React.Component {
                                 <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/640/480/nature"} alt={ place.name } />
                             </figure>
                          <span className="icon is-small fav-dest">
-                            <a href="#" className="likes"><i className="fa fa-heart likes" aria-hidden="true"></i></a>
+                            <a href="#" className="likes" ><i className="fa fa-heart likes" aria-hidden="true"></i></a>
                          </span>
                        </div>
                        <div className="card-content">
