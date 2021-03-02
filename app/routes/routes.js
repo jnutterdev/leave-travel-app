@@ -28,7 +28,10 @@ router.delete('/mytrips/:id', trips_controller.mytrips_delete_post);
 
 // FAVORITE ROUTES
 // creates favorite (clicks heart on card)
-router.post('/favorite', favorite_controller.favorite_create_post);
+router.post('/favorites', favorite_controller.favorites_create_post);
+
+// GET all My favorites (tested and works)
+router.get('/favorites/:id', favorite_controller.favorites_foruser_get);
 
 
 // USER ROUTES
