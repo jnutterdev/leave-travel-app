@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     place: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     reservations: DataTypes.STRING,
-    travelDates: DataTypes.STRING
+    travelDates: DataTypes.STRING,
+    photo: DataTypes.STRING,
+    placeURL: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'MyTrips',
