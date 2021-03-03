@@ -28,7 +28,7 @@ export default function Header() {
                         </a>
                     </span>
                     <span className="navbar-item">
-                        <a className="button is-white is-outlined" href="/mytrips">
+                        <a className="button is-white is-outlined" href="/trips">
                             <span className="icon">
                             <i className="fas fa-map-marked-alt"></i>
                             </span>
