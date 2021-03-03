@@ -18,6 +18,7 @@
         "password": "094c885434cb2e28c928158eb5b4011711b9ba47262dcdccc773f311b2437c00",
         "database": "leavedb",
         "host": "127.0.0.1",
-        "dialect": "postgres"
+        "dialect": "postgres",
+        "use_env_variable": "DATABASE_URL"
     }
 }
