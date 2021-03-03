@@ -20,11 +20,11 @@ export default function Header() {
             <div id="navbarMenu" className="navbar-menu">
                 <div className="navbar-end">
                     <span className="navbar-item">
-                        <a className="button is-white is-outlined" href="/itineraries">
+                        <a className="button is-white is-outlined" href="/">
                             <span className="icon">
                                 <i className="fa fa-home"></i>
                             </span>
-                            <span>Itineraries</span>
+                            <span>Home</span>
                         </a>
                     </span>
                     <span className="navbar-item">
@@ -33,6 +33,14 @@ export default function Header() {
                             <i className="fas fa-map-marked-alt"></i>
                             </span>
                             <span>My trips</span>
+                        </a>
+                    </span>
+                    <span className="navbar-item">
+                        <a className="button is-white is-outlined" href="/itineraries">
+                            <span className="icon">
+                            <i className="fas fa-train"></i>
+                            </span>
+                            <span>Itineraries</span>
                         </a>
                     </span>
                    
