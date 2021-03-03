@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node server.js",
         "build": "cd react-client && npm install && npm run-script build",
-        "heroku-postbuild": "cd react-client && npm install && npm run-script build && npx sequelize-cli db:migrate"
+        "heroku-postbuild": "cd react-client && npm install && npm run-script build"
     },
     "engines": {
         "node": "15.5.1"
