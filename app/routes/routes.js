@@ -1,7 +1,7 @@
 // Route module
 const express = require('express');
 const router = express.Router();
-const cors = require('cors');
+
 
 module.exports = router;
 // Require controller modules
@@ -12,20 +12,20 @@ const favorite_controller = require('../controllers/favoriteController')
 // MY TRIPS ROUTES //
 
 // CREATES trip (enters trip details, selects place, saves - tested and works)
-router.post('/mytrips', cors(), trips_controller.mytrips_create_post);
+router.post('/mytrips', trips_controller.mytrips_create_post);
 
 // GET all My Trips (tested and works)
-router.get('/mytrips', cors(), trips_controller.mytrips_foruser_get);
+router.get('/mytrips', trips_controller.mytrips_foruser_get);
 
 // // GET a single trip  (tested and works)
 // router.get('/mytrips/:id', trips_controller.mytrips_get);
 
 
 // update trip (patch for update - tested and works)
-router.patch('/mytrips/:id', cors(), trips_controller.mytrips_update_patch);
+router.patch('/mytrips/:id', trips_controller.mytrips_update_patch);
 
 // delete a trip (tested and works)
-router.delete('/mytrips/:id', cors(), trips_controller.mytrips_delete_post);
+router.delete('/mytrips/:id', trips_controller.mytrips_delete_post);
 
 // FAVORITE ROUTES
 // creates favorite (clicks heart on card)
