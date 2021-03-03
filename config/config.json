@@ -1,23 +1,23 @@
 {
-  "development": {
-    "username": "",
-    "password": null,
-    "database": "leavedb",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "leave",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "leavedb",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  }
+    "development": {
+        "username": "",
+        "password": null,
+        "database": "leavedb",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "leave",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "uceecyueilxece",
+        "password": "094c885434cb2e28c928158eb5b4011711b9ba47262dcdccc773f311b2437c00",
+        "database": "leavedb",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
 }
