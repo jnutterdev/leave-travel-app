@@ -22,6 +22,7 @@ import Todo from './components/Todo';
 import Footer from './components/Footer';
 import SearchResults from './containers/SearchResults';
 import ItineraryOptions from './components/ItineraryOptions';
+import About from './components/About';
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
                 </Route>
                 <Route path = '/todo'>
                   <Todo />
+                </Route>
+                <Route path = '/about'>
+                  <About />
                 </Route>
               </Switch>
             </div>
