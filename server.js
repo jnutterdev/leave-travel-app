@@ -5,18 +5,12 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 
-const allowedOrigins = ['http://localhost:3001', 'http://localhost:3000', "https://powerful-brushlands-03027.herokuapp.com"];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}
-app.use(cors(corsOptions));
-
+// const cors = require("cors");
+// const corsOptions = {
+//   origin: 'http://localhost:3001',
+//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
+// app.use(cors());
 app.use(express.json()); //req.body
 
 var routesRouter = require('./app/routes/routes')
