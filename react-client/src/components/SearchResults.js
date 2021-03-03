@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button'
 
 class SearchResults extends React.Component {
     constructor(props) {
@@ -6,10 +7,8 @@ class SearchResults extends React.Component {
             this.state = {
                 error: null,
                 isLoaded: false,
-                places:[],
+                places:[]
             };
-
-            this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -37,36 +36,6 @@ class SearchResults extends React.Component {
             )
     }
 
-    handleClick(place, e) {
-        e.preventDefault();
-
-        const data = {
-            placeId: place.id,
-            place: place.name,
-            // userId: ,
-            travelDates: "",
-            reservations: "",
-            photo: place.thumbnail_url,
-            placeURL: place.url
-        }
-
-        const url= 'http://localhost:3001/mytrips'
-        fetch((url), {
-            method:"POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.log('Error:', error);
-        })
-    }
-
     render() {
         const { error, isLoaded, places } = this.state;
         console.log(places)
@@ -92,24 +61,18 @@ class SearchResults extends React.Component {
                        </div>
                        <div className="card-content">
                          <div className="media">
-                           <div className="media-left">
+                           {/* <div className="media-left">
                              <figure className="image is-48x48">
                              <img src={ place.thumbnail_url ? place.thumbnail_url : "https://placeimg.com/48/48/nature"} alt={ place.name  } />
                              </figure>
-                           </div>
+                           </div> */}
                            <div className="media-content has-text-left">
                              <p className="title is-6">{place.name}</p>
                              <p className="subtitle is-6"><a href={place.url} target="_blank" rel="noreferrer">{place.name_suffix}</a></p>
                            </div>
                          </div>
-                     
-                         {/* <div className="content has-text-left" style= {{ height: 96 }}>
-                           <p style={{height: 80}}>{place.perex}</p>
-                         </div> */}
                        </div>
-                        <div style = {{ display: "flex", justifyContent: "center", alignItems: "center", bottom: 10 }}>
-                            <button style= {{display: "float"}} className="button" onClick={this.handleClick.bind(this, place)}>Add To Trip</button>
-                        </div>
+                        <Button place={place} />
                      </div>
                      </div>
                     ))}
