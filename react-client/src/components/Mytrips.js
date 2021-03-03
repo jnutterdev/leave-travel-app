@@ -10,6 +10,7 @@ function MyTrips() {
         const url = `http://localhost:3001/mytrips`
         fetch((url), {
             method: "GET",
+            mode: "cors",
             headers: {
                 'Content-Type': 'application/json',
             },
