@@ -2,15 +2,12 @@ const { Sequelize } = require('sequelize');
 const path = require('path');
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const port = process.env.PORT || 3001;
 
 
-// const cors = require("cors");
-// const corsOptions = {
-//   origin: 'http://localhost:3001',
-//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// }
-// app.use(cors());
+
+
 app.use(express.json()); //req.body
 
 var routesRouter = require('./app/routes/routes')
@@ -31,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'react-client/build')));
 
 //Requiring the routes
 var routes = require("./app/routes/routes");
-app.use('/', routes);
+app.use('/', cors(), routes);
 
 // A simple endpoint just for testing GET requests
 app.get("/ping", (req, res) => {
