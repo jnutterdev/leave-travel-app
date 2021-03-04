@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
+
 module.exports = router;
 // Require controller modules
 const trips_controller = require('../controllers/tripsController');

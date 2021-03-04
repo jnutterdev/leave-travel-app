@@ -7,8 +7,8 @@ function MyTrips() {
     const [places, setPlaces] = useState([]);
     
     useEffect(() => {
-        const url = `http://localhost:3001/mytrips`
-        fetch((url), {
+        // const url = `https://powerful-brushlands-03027.herokuapp.com/mytrips`
+        fetch(('/mytrips'), {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',
