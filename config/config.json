@@ -19,7 +19,7 @@
         "database": "d9nmsgh9uvv378",
         "host": "127.0.0.1",
         "dialect": "postgres",
-        "ssl": true,
+        "protocol": "postgres",
         "dialectOptions": {
             "ssl": true
         },
