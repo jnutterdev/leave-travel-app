@@ -11,14 +11,14 @@ export default function About() {
         <section className="hero is-primary is-medium bg-main">
             <div className="hero-body">
                 <div className="columns is multiline">
-                <div className="column is-one-third">
-                    <div className="card">
-                        <div className="card-image">
-                            <figure className="image is-240x240">
-                                <img src= {Kristin} />
-                            </figure>
-                        </div>
-                        <div className="card-content">
+                    <div className="column is-one-third">
+                        <div className="card">
+                                <div className="card-image pt-4">
+                                     <figure className="image is-240x240">
+                                     <a href="https://github.com/kristinhargrove/" target="_blank"><img src= {Kristin} /></a>
+                                    </figure>
+                                </div>
+                             <div className="card-content">
                             <div className="media">
                                 <div className="media-content">
                                     <p className="title is-5 has-text-dark">Kristin Hargrove</p>
@@ -29,43 +29,45 @@ export default function About() {
                     </div>       
                 </div>
 
-                <div className="column is-one-third">
-                    <div className="card">
-                        <div className="card-image">
-                            <figure className="image is-240x240">
-                                <img src= {John} />
-                            </figure>
-                        </div>
-                    </div>
-                        <div className="card-content">
+               
+                    <div className="column is-one-third">
+                        <div className="card">
+                            <div className="card-image pt-4">
+                                <figure className="image is-240x240">
+                                 <a href="https://github.com/jnutterdev/" target="_blank"><img src= {John} /></a>
+                                </figure>
+                            </div>
+                            <div className="card-content">
                             <div className="media">
                                 <div className="media-content">
                                     <p className="title is-5 has-text-dark">John Nutter</p>
-                                    <p className="content">Full stack developer fueled on coffee, fan of synthesizers and fm synthesis. Hasn't gotten to travel much, but is using this app to plan a trip to Japan!
+                                    <p className="content">Full stack developer, fan of synthesizers, fueled on coffee. Hasn't traveled much, but is using this app to plan a trip to Japan!
                                     </p>
                                 </div>    
+                            </div> 
                             </div>
                         </div>
-                </div>       
+                    </div>       
 
                 <div className="column is-one-third">
                     <div className="card">
-                        <div className="card-image">
+                        <div className="card-image pt-4">
                             <figure className="image is-240x240">
-                                <img src= {Tara} />
+                            <a href="https://github.com/taradactyl9/" target="_blank"><img src= {Tara} /></a>
                             </figure>
                         </div>
-                        <div className="card-content">
-                            <div className="media">
-                                <div className="media-content">
+                            <div className="card-content">
+                                <div className="media">
+                                    <div className="media-content">
                                     <p className="title is-5 has-text-dark">Tara Davies</p>
                                     <p className="content">Full stack developer, product manager, dj, podcast host, and Twitch Affiliate. Favorite destination - Italy.</p>
+                                    
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>        
-                </div>
-                </div>
+                        </div>        
+                    </div>
+                </div>  
             </div>
         </section>
     )
