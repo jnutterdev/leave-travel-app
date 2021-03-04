@@ -17,18 +17,10 @@ var routesRouter = require('./app/routes/routes')
 
 // Passing a connection URI for sequelize database
 const sequelize = new Sequelize({
-  database: "d9nmsgh9uvv378",
-  username: "uceecyueilxece",
-  password: "094c885434cb2e28c928158eb5b4011711b9ba47262dcdccc773f311b2437c00",
-  host: "ec2-50-16-108-41.compute-1.amazonaws.com",
-  port: 5432,
-  dialect: "postgres",
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false 
-    }
-  },
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 // Commented out sequelize auth temporarily so we can get app deployed, will revisit after
 // try {
