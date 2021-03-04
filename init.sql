@@ -541,3 +541,515 @@ ALTER TABLE ONLY public.favorite
 -- PostgreSQL database dump complete
 --
 
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.2
+-- Dumped by pg_dump version 13.2
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: Favorite; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public."Favorite" (
+    id integer NOT NULL,
+    "userId" integer,
+    placeid character varying(255),
+    place character varying(255),
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."Favorite" OWNER TO dune;
+
+--
+-- Name: Favorite_id_seq; Type: SEQUENCE; Schema: public; Owner: dune
+--
+
+CREATE SEQUENCE public."Favorite_id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Favorite_id_seq" OWNER TO dune;
+
+--
+-- Name: Favorite_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dune
+--
+
+ALTER SEQUENCE public."Favorite_id_seq" OWNED BY public."Favorite".id;
+
+
+--
+-- Name: Favorites; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public."Favorites" (
+    id integer NOT NULL,
+    "placeId" character varying(255),
+    place character varying(255),
+    "userId" integer,
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."Favorites" OWNER TO dune;
+
+--
+-- Name: Favorites_id_seq; Type: SEQUENCE; Schema: public; Owner: dune
+--
+
+CREATE SEQUENCE public."Favorites_id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Favorites_id_seq" OWNER TO dune;
+
+--
+-- Name: Favorites_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dune
+--
+
+ALTER SEQUENCE public."Favorites_id_seq" OWNED BY public."Favorites".id;
+
+
+--
+-- Name: MyTrips; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public."MyTrips" (
+    id integer NOT NULL,
+    "placeId" character varying(255),
+    place character varying(255),
+    "userId" integer,
+    reservations character varying(255),
+    "travelDates" character varying(255),
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL,
+    "placeURL" character varying(255),
+    photo character varying(255)
+);
+
+
+ALTER TABLE public."MyTrips" OWNER TO dune;
+
+--
+-- Name: MyTrips_id_seq; Type: SEQUENCE; Schema: public; Owner: dune
+--
+
+CREATE SEQUENCE public."MyTrips_id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."MyTrips_id_seq" OWNER TO dune;
+
+--
+-- Name: MyTrips_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dune
+--
+
+ALTER SEQUENCE public."MyTrips_id_seq" OWNED BY public."MyTrips".id;
+
+
+--
+-- Name: Photos; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public."Photos" (
+    id integer NOT NULL,
+    title character varying(255),
+    url character varying(255),
+    "userId" integer,
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."Photos" OWNER TO dune;
+
+--
+-- Name: Photos_id_seq; Type: SEQUENCE; Schema: public; Owner: dune
+--
+
+CREATE SEQUENCE public."Photos_id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Photos_id_seq" OWNER TO dune;
+
+--
+-- Name: Photos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dune
+--
+
+ALTER SEQUENCE public."Photos_id_seq" OWNED BY public."Photos".id;
+
+
+--
+-- Name: SequelizeMeta; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public."SequelizeMeta" (
+    name character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public."SequelizeMeta" OWNER TO dune;
+
+--
+-- Name: Users; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public."Users" (
+    id integer NOT NULL,
+    "firstName" character varying(255),
+    "lastName" character varying(255),
+    email character varying(255),
+    "myTripId" integer,
+    "travelDates" character varying(255),
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."Users" OWNER TO dune;
+
+--
+-- Name: Users_id_seq; Type: SEQUENCE; Schema: public; Owner: dune
+--
+
+CREATE SEQUENCE public."Users_id_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Users_id_seq" OWNER TO dune;
+
+--
+-- Name: Users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dune
+--
+
+ALTER SEQUENCE public."Users_id_seq" OWNED BY public."Users".id;
+
+
+--
+-- Name: favorite; Type: TABLE; Schema: public; Owner: dune
+--
+
+CREATE TABLE public.favorite (
+    id integer NOT NULL,
+    "userId" integer,
+    favorite character varying(255),
+    placeid character varying(255),
+    place character varying(255),
+    "createdAt" timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.favorite OWNER TO dune;
+
+--
+-- Name: favorite_id_seq; Type: SEQUENCE; Schema: public; Owner: dune
+--
+
+CREATE SEQUENCE public.favorite_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.favorite_id_seq OWNER TO dune;
+
+--
+-- Name: favorite_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dune
+--
+
+ALTER SEQUENCE public.favorite_id_seq OWNED BY public.favorite.id;
+
+
+--
+-- Name: Favorite id; Type: DEFAULT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Favorite" ALTER COLUMN id SET DEFAULT nextval('public."Favorite_id_seq"'::regclass);
+
+
+--
+-- Name: Favorites id; Type: DEFAULT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Favorites" ALTER COLUMN id SET DEFAULT nextval('public."Favorites_id_seq"'::regclass);
+
+
+--
+-- Name: MyTrips id; Type: DEFAULT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."MyTrips" ALTER COLUMN id SET DEFAULT nextval('public."MyTrips_id_seq"'::regclass);
+
+
+--
+-- Name: Photos id; Type: DEFAULT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Photos" ALTER COLUMN id SET DEFAULT nextval('public."Photos_id_seq"'::regclass);
+
+
+--
+-- Name: Users id; Type: DEFAULT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Users" ALTER COLUMN id SET DEFAULT nextval('public."Users_id_seq"'::regclass);
+
+
+--
+-- Name: favorite id; Type: DEFAULT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public.favorite ALTER COLUMN id SET DEFAULT nextval('public.favorite_id_seq'::regclass);
+
+
+--
+-- Data for Name: Favorite; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public."Favorite" (id, "userId", placeid, place, "createdAt", "updatedAt") FROM stdin;
+\.
+
+
+--
+-- Data for Name: Favorites; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public."Favorites" (id, "placeId", place, "userId", "createdAt", "updatedAt") FROM stdin;
+\.
+
+
+--
+-- Data for Name: MyTrips; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public."MyTrips" (id, "placeId", place, "userId", reservations, "travelDates", "createdAt", "updatedAt", "placeURL", photo) FROM stdin;
+\.
+
+
+--
+-- Data for Name: Photos; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public."Photos" (id, title, url, "userId", "createdAt", "updatedAt") FROM stdin;
+\.
+
+
+--
+-- Data for Name: SequelizeMeta; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public."SequelizeMeta" (name) FROM stdin;
+20210217010849-create-user.js
+20210217011424-create-my-trips.js
+20210227161731-linkingTables.js
+20210227162245-linkingTables2.js
+20210227162341-addFirstName.js
+20210301033139-create-favorite.js
+20210301042703-Favorite.js
+20210301214654-create-photo.js
+20210301214848-create-favorites.js
+20210302000909-addPlaceDetail.js
+20210302001030-favorites2.js
+20210302001324-places.js
+\.
+
+
+--
+-- Data for Name: Users; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public."Users" (id, "firstName", "lastName", email, "myTripId", "travelDates", "createdAt", "updatedAt") FROM stdin;
+\.
+
+
+--
+-- Data for Name: favorite; Type: TABLE DATA; Schema: public; Owner: dune
+--
+
+COPY public.favorite (id, "userId", favorite, placeid, place, "createdAt", "updatedAt") FROM stdin;
+\.
+
+
+--
+-- Name: Favorite_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dune
+--
+
+SELECT pg_catalog.setval('public."Favorite_id_seq"', 1, false);
+
+
+--
+-- Name: Favorites_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dune
+--
+
+SELECT pg_catalog.setval('public."Favorites_id_seq"', 1, false);
+
+
+--
+-- Name: MyTrips_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dune
+--
+
+SELECT pg_catalog.setval('public."MyTrips_id_seq"', 32, true);
+
+
+--
+-- Name: Photos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dune
+--
+
+SELECT pg_catalog.setval('public."Photos_id_seq"', 1, false);
+
+
+--
+-- Name: Users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dune
+--
+
+SELECT pg_catalog.setval('public."Users_id_seq"', 1, false);
+
+
+--
+-- Name: favorite_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dune
+--
+
+SELECT pg_catalog.setval('public.favorite_id_seq', 1, false);
+
+
+--
+-- Name: Favorite Favorite_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Favorite"
+    ADD CONSTRAINT "Favorite_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Favorites Favorites_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Favorites"
+    ADD CONSTRAINT "Favorites_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: MyTrips MyTrips_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."MyTrips"
+    ADD CONSTRAINT "MyTrips_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Photos Photos_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Photos"
+    ADD CONSTRAINT "Photos_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: SequelizeMeta SequelizeMeta_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."SequelizeMeta"
+    ADD CONSTRAINT "SequelizeMeta_pkey" PRIMARY KEY (name);
+
+
+--
+-- Name: Users Users_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Users"
+    ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: favorite favorite_pkey; Type: CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public.favorite
+    ADD CONSTRAINT favorite_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: Favorite Favorite_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Favorite"
+    ADD CONSTRAINT "Favorite_userId_fkey" FOREIGN KEY ("userId") REFERENCES public."Users"(id) ON DELETE CASCADE;
+
+
+--
+-- Name: Favorites Favorites_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."Favorites"
+    ADD CONSTRAINT "Favorites_userId_fkey" FOREIGN KEY ("userId") REFERENCES public."Users"(id) ON DELETE CASCADE;
+
+
+--
+-- Name: MyTrips MyTrips_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public."MyTrips"
+    ADD CONSTRAINT "MyTrips_userId_fkey" FOREIGN KEY ("userId") REFERENCES public."Users"(id) ON DELETE CASCADE;
+
+
+--
+-- Name: favorite favorite_userId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: dune
+--
+
+ALTER TABLE ONLY public.favorite
+    ADD CONSTRAINT "favorite_userId_fkey" FOREIGN KEY ("userId") REFERENCES public."Users"(id) ON DELETE CASCADE;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
