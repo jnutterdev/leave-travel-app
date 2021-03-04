@@ -19,10 +19,6 @@
         "database": "d9nmsgh9uvv378",
         "host": "ec2-50-16-108-41.compute-1.amazonaws.com",
         "dialect": "postgres",
-        "protocol": "postgres",
-        "dialectOptions": {
-            "ssl": true
-        },
-        "use_env_variable": "DATABASE_URL"
+        "protocol": "postgres"
     }
 }
