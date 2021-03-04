@@ -27,8 +27,8 @@ class Button extends React.Component {
         }
 
 
-        const url= 'http://localhost:3001/mytrips'
-        fetch((url), {
+        // const url= '/mytrips'
+        fetch(('/mytrips'), {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json',
